@@ -1,0 +1,19 @@
+$maxWidth: 1440;
+$maxWidthContainer: 1200;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $addMobSize: $addSize + $addSize * 7;
+
+ @media (max-width: 767px) {
+   font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320) / #{$maxWidth}));
+ }
+
+ @media (min-width: 320px) {
+   font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+ }
+}
+
+
+// @include adaptiv-font(pc,mob )
+

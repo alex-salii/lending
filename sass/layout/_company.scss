@@ -1,0 +1,164 @@
+.company__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  width: 100%;
+  height: 435px;
+  background: #fbfbfb;
+  margin-top: 20px;
+  position: relative;
+}
+
+.company__content-composition {
+  display: flex;
+  position: relative;
+
+  img {
+    transition: all 0.4s;
+    outline-offset: 20px;
+  }
+  img:hover {
+    transform: scale(1.15);
+  }
+}
+
+.img__card1 {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+.img__card2 {
+  position: absolute;
+  top: 325px;
+  left: 100px;
+}
+.img__card3 {
+  position: absolute;
+  top: 60px;
+  left: 400px;
+}
+
+.company__content-text {
+  width: 40%;
+}
+
+.company__title {
+  padding-top: 30px;
+  padding-left: 5px;
+}
+.company__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000000;
+  padding: 20px 70px 0 5px;
+  margin-left: 5px;
+}
+
+.company-btn {
+  margin-top: 20px;
+  transition: all 0.4s;
+  &:link,
+  &:visited {
+    display: flex;
+    position: absolute;
+    padding: 30px 100px 30px 60px;
+    font-size: 12px;
+    color: #333;
+    background-color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+
+  &-span {
+    font-size: 20px;
+    position: absolute;
+    top: 34%;
+    left: 58%;
+  }
+
+  &:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem rgba(#333, 0.15);
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1150px) {
+  .img__card1,
+  .img__card2 {
+    left: 0;
+  }
+
+  .img__card3 {
+    left: 290px;
+  }
+}
+
+@media (max-width: 970px) {
+  .company__content {
+    // flex-direction: column-reverse;
+    align-items: center;
+    display: flex;
+  }
+
+  .img__card1 {
+    display: none;
+  }
+  .img__card2 {
+    display: none;
+  }
+
+  .img__card3 {
+    top: -136px;
+    left: 30px;
+    width: 200px;
+  }
+
+  .company__text {
+    padding-right: 30px;
+  }
+
+  .company__content-text {
+    width: 60%;
+  }
+
+  .company-btn {
+    margin-top: 5px;
+    transition: all 0.4s;
+    &:link,
+    &:visited {
+      padding: 15px 50px 15px 30px;
+    }
+
+    &-span {
+      font-size: 20px;
+      position: absolute;
+      top: 24%;
+      left: 62%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .img__card3 {
+    display: none;
+  }
+
+  .company__content-text {
+    width: 100%;
+  }
+
+  .company__title {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+  }
+}

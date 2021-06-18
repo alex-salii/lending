@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "TTHoves";
+}
+
+._container {
+  max-width: $maxWidthContainer + px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+  @include adaptiv-font(64, 36);
+  line-height: 64px;
+  color: #333;
+}
+
+h2 {
+  font-weight: 300;
+  @include adaptiv-font(64, 36);
+  line-height: 64px;
+  color: #bdbdbd;
+}
+
+h3 {
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  color: #fff;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+a  {
+  text-decoration: none;
+}
